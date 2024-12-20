@@ -5,6 +5,7 @@ const AppHome = () => {
 	return (
 		<View>
 			<Text>App Test</Text>
+            <Text>Commit Check</Text>
 		</View>
 	);
 };
