@@ -3,7 +3,7 @@ pre-commit:
   commands:
     lint:
       glob: "./src/{js,ts,jsx,tsx}"
-      run: pnpm lint
+      run: pnpm lint:fix
     typecheck:
       glob: "./src/{js,ts,jsx,tsx}"
       run: pnpm tsc --noEmit
