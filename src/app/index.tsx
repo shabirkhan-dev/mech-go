@@ -20,13 +20,20 @@ export default function HomeScreen() {
 				</Text>
 			</View>
 
-			<View className="space-y-4">
+			<View className="gap-y-4">
 				<Button
 					variant="primary"
 					size="lg"
 					onPress={() => router.push("/(auth)/login")}
 				>
 					Login
+				</Button>
+				<Button
+					variant="primary"
+					size="lg"
+					onPress={() => router.push("/(auth)/onboard")}
+				>
+					Onboard
 				</Button>
 
 				<Button

@@ -13,22 +13,22 @@ export const Input = forwardRef<TextInput, InputProps>(
 		const { isDark } = useTheme();
 
 		return (
-			<View className="space-y-2">
+			<View className="flex flex-col gap-2">
 				{label && (
 					<Text
-						className={`text-sm ${isDark ? "text-gray-300" : "text-gray-700"}`}
+						className={`text-sm font-semibold ${isDark ? "text-gray-300" : "text-gray-700"}`}
 					>
 						{label}
 					</Text>
 				)}
 				<TextInput
 					ref={ref}
-					className={`p-3 rounded-lg border ${
+					className={`px-5 py-5 rounded-2xl border-[0.5] ${
 						isDark
-							? "bg-gray-800 border-gray-700 text-white"
-							: "bg-white border-gray-300 text-black"
+							? "bg-[#0000001A]/10 border-[#ffffff]/15 text-white"
+							: "bg-gray-100 border-gray-300 text-black"
 					} ${error ? "border-red-500" : ""}`}
-					placeholderTextColor={isDark ? "#9CA3AF" : "#6B7280"}
+					placeholderTextColor={isDark ? "#FFFFFF33" : "#6B7280"}
 					{...props}
 				/>
 				{error && <Text className="text-red-500 text-sm">{error}</Text>}

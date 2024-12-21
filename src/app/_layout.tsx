@@ -11,12 +11,12 @@ const ThemedContainer = ({ children }: { children: React.ReactNode }) => {
 	const { isDark } = useTheme();
 	const containerStyles = useThemedStyles(
 		"flex-1 bg-white absolute top-0 left-0 right-0 bottom-0",
-		"flex-1 bg-gray-900 absolute top-0 left-0 right-0 bottom-0",
+		"flex-1 bg-[#2A2A2A] absolute top-0 left-0 right-0 bottom-0",
 	);
 
 	const safeAreaStyles = useThemedStyles(
 		"flex-1 bg-white mt-12",
-		"flex-1 bg-gray-900  mt-12",
+		"flex-1 bg-[2A2A2A]  mt-12",
 	);
 	return (
 		<Fragment>

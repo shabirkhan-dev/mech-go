@@ -1,11 +1,12 @@
 import { useTheme } from "@/providers/theme-provider";
-// src/components/ui/Button.tsx
-import { Pressable, Text } from "react-native";
+import { Pressable } from "react-native";
+import ThemeText from "./theme-text";
 
 interface ButtonProps {
 	variant?: "primary" | "secondary" | "outline";
 	size?: "sm" | "md" | "lg";
 	children: React.ReactNode;
+	className?: string;
 	onPress: () => void;
 }
 
@@ -14,10 +15,11 @@ export const Button: React.FC<ButtonProps> = ({
 	size = "md",
 	children,
 	onPress,
+	className,
 }) => {
 	const { isDark } = useTheme();
 
-	const baseStyles = "rounded-lg font-medium";
+	const baseStyles = "rounded-2xl font-medium";
 
 	const variants = {
 		primary: `bg-primary ${isDark ? "text-white" : "text-black"}`,
@@ -28,27 +30,17 @@ export const Button: React.FC<ButtonProps> = ({
 	const sizes = {
 		sm: "px-4 py-2 text-sm",
 		md: "px-6 py-3 text-base",
-		lg: "px-8 py-4 text-lg",
+		lg: "px-8 py-5 text-lg",
 	};
 
 	return (
 		<Pressable
-			className={`${baseStyles} ${variants[variant]} ${sizes[size]}`}
+			className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
 			onPress={onPress}
 		>
-			<Text
-				className={`
-          ${
-						variant === "outline"
-							? "text-primary"
-							: isDark
-								? "text-white"
-								: "text-black"
-					}
-        `}
-			>
+			<ThemeText className="text-center text-white font-semibold">
 				{children}
-			</Text>
+			</ThemeText>
 		</Pressable>
 	);
 };
