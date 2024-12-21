@@ -96,5 +96,10 @@
       "@semantic-release/git",
       "@semantic-release/github"
     ]
-  }
+  },
+  "author": {
+    "name": "Shabir Khan",
+    "email": "shabirkhan.dev@gamil.com",
+    "url": "https://shabirkhan.dev"
+    }
 }
