@@ -1,23 +1,25 @@
-// src/app/index.tsx
+// src/app/theme.tsx
 import { Button } from "@/components/ui/button";
+import { ThemeSwitcher } from "@/components/ui/theme-switcher";
 import { useTheme } from "@/providers/theme-provider";
 import { useRouter } from "expo-router";
 import { Text, View } from "react-native";
 
-export default function HomeScreen() {
-	const router = useRouter();
+export default function ThemeScreen() {
 	const { isDark } = useTheme();
+	const router = useRouter();
 
 	return (
 		<View className="flex-1 justify-between p-4">
-			<View className="space-y-4">
+			<View className="space-y-6">
 				<Text
 					className={`text-2xl font-bold ${
 						isDark ? "text-white" : "text-gray-900"
 					}`}
 				>
-					Welcome
+					Theme Settings
 				</Text>
+				<ThemeSwitcher />
 			</View>
 
 			<View className="space-y-4">
@@ -26,15 +28,10 @@ export default function HomeScreen() {
 					size="lg"
 					onPress={() => router.push("/(auth)/login")}
 				>
-					Login
+					Go to Login
 				</Button>
-
-				<Button
-					variant="secondary"
-					size="lg"
-					onPress={() => router.push("/theme")}
-				>
-					Theme Settings
+				<Button variant="outline" size="lg" onPress={() => router.back()}>
+					Go Back
 				</Button>
 			</View>
 		</View>

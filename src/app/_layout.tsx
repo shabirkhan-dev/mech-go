@@ -4,8 +4,8 @@ import { useThemedStyles } from "@/hooks/useThemeStyle";
 import Providers from "@/providers";
 import { useTheme } from "@/providers/theme-provider";
 import { StatusBar } from "expo-status-bar";
-import { SafeAreaView, View } from "react-native";
 import { Fragment } from "react";
+import { SafeAreaView, View } from "react-native";
 
 const ThemedContainer = ({ children }: { children: React.ReactNode }) => {
 	const { isDark } = useTheme();
