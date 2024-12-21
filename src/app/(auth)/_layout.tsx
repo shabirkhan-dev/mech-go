@@ -3,8 +3,8 @@ import { BackButton } from "@/components/back-button";
 import { useThemedStyles } from "@/hooks/useThemeStyle";
 import { useTheme } from "@/providers/theme-provider";
 import { Slot, useRouter } from "expo-router";
+import { Fragment } from "react";
 import { View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function AuthLayout() {
 	const router = useRouter();
@@ -16,13 +16,13 @@ export default function AuthLayout() {
 	);
 
 	return (
-		<SafeAreaView className={containerStyles}>
+		<Fragment>
 			<View className="flex-row items-center  px-2">
 				<BackButton showLabel={false} />
 			</View>
 			<View className="flex-1 px-4">
 				<Slot />
 			</View>
-		</SafeAreaView>
+		</Fragment>
 	);
 }
