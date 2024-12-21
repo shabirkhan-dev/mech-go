@@ -5,9 +5,6 @@ const AppHome = () => {
 	return (
 		<View>
 			<Text className="text-red-500">App Test</Text>
-			<Text className="text-blue-400">Commit Check</Text>
-			<Text> Check Git Hook</Text>
-			<Text>Commit Check Linter</Text>
 		</View>
 	);
 };
