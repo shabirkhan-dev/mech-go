@@ -1,12 +1,15 @@
-import React from "react";
-import { Text, View } from "react-native";
+import { Button } from "@/components/ui/button";
+import { ThemeSwitcher } from "@/components/ui/theme-switcher";
+import { View } from "react-native";
 
-const AppHome = () => {
+const App = () => {
 	return (
 		<View>
-			<Text className="text-red-500">App Test</Text>
+			<Button variant="primary" size="lg" onPress={() => {}}>
+				Get Started
+			</Button>
+			<ThemeSwitcher />
 		</View>
 	);
 };
-
-export default AppHome;
+export default App;
