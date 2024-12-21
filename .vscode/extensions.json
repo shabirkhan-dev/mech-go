@@ -1,0 +1,25 @@
+{
+    "recommendations": [
+      // Core Extensions
+      "biomejs.biome", // Biome for formatting and linting
+
+
+
+
+      // Git
+      "eamodio.gitlens", // Enhanced Git capabilities
+
+      // Developer Experience
+      "aaron-bond.better-comments", // Better comment highlighting
+
+      // Icons & Themes
+      "pkief.material-icon-theme", // Material Icon Theme
+      "zhuangtongfa.material-theme", // One Dark Pro theme
+
+      // Debugging & Performance
+      "wix.vscode-import-cost", // Display import sizes
+
+      // Mobile Development
+      "Expo.vscode-expo-tools" // Expo tools
+    ]
+  }

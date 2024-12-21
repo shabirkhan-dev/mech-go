@@ -1,12 +1,13 @@
 pre-commit:
   parallel: true
   commands:
+    # check:
+    #   glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
+    #   run: npx @biomejs/biome check --no-errors-on-unmatched --files-ignore-unknown=true --colors=off {push_files}
     lint:
-      glob: "src/**/*.{js,ts,jsx,tsx}"
-      run: git diff --staged --name-only | grep -E '\.tsx?$|\.jsx?$' | xargs -r pnpm biome check --fix
+      run: pnpm run lint:fix
     typecheck:
-      glob: "src/**/*.{js,ts,jsx,tsx}"
-      run: pnpm tsc --noEmit
+      run: pnpm run typecheck
 
 commit-msg:
   commands:
