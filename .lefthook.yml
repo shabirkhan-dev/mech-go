@@ -2,10 +2,10 @@ pre-commit:
   parallel: true
   commands:
     lint:
-      glob: "./src/{js,ts,jsx,tsx}"
-      run: pnpm lint:fix
+      glob: "src/**/*.{js,ts,jsx,tsx}"
+      run: git diff --staged --name-only | grep -E '\.tsx?$|\.jsx?$' | xargs -r pnpm biome check --fix
     typecheck:
-      glob: "./src/{js,ts,jsx,tsx}"
+      glob: "src/**/*.{js,ts,jsx,tsx}"
       run: pnpm tsc --noEmit
 
 commit-msg:
