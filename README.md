@@ -1,18 +1,31 @@
-# React Native Expo Template 📱
+# MechGo - Emergency Roadside Assistance App 🔧
 
-A modern, fully-featured React Native template with Expo, TypeScript, and best practices setup out of the box.
+A modern React Native Expo application connecting stranded motorists with nearby mechanics in real-time. Built with TypeScript and following industry best practices.
 
-## ✨ Features
+## ✨ Core Features
 
-- 🚀 [Expo](https://expo.dev/) for cross-platform development
-- 📱 [Expo Router](https://expo.github.io/router/docs/) for navigation
-- 🔥 [TypeScript](https://www.typescriptlang.org/) for type safety
-- 💅 [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/) for smooth animations
-- 🧪 [Jest](https://jestjs.io/) for testing
-- 🎯 [Biome](https://biomejs.dev/) for linting and formatting
-- 📝 [Commitizen](https://commitizen-tools.github.io/commitizen/) & [Commitlint](https://commitlint.js.org/) for consistent commits
-- 🔄 [Semantic Release](https://semantic-release.gitbook.io/) for automated versioning
-- 🪝 [Lefthook](https://github.com/evilmartians/lefthook) for Git hooks
+- 🚨 **Emergency SOS System**
+  - One-tap emergency mechanic dispatch
+  - Real-time location sharing
+  - Smart mechanic matching algorithm
+
+- 📱 **Modern Tech Stack**
+  - [Expo](https://expo.dev/) for cross-platform development
+  - [Expo Router](https://expo.github.io/router/docs/) for navigation
+  - [TypeScript](https://www.typescriptlang.org/) for type safety
+  - [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/) for smooth animations
+
+- 🔒 **Security & Verification**
+  - Mechanic identity verification
+  - Secure payment processing
+  - End-to-end chat encryption
+  - Real-time tracking protection
+
+- 💳 **Business Features**
+  - Multiple payment methods
+  - Service cost calculator
+  - Invoice generation
+  - Earnings analytics for mechanics
 
 ## 🚀 Getting Started
 
@@ -28,13 +41,16 @@ A modern, fully-featured React Native template with Expo, TypeScript, and best p
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/react-native-templete.git
+git clone https://github.com/yourusername/mechgo.git
 
 # Navigate to the project directory
-cd react-native-templete
+cd mechgo
 
 # Install dependencies
 pnpm install
+
+# Set up environment variables
+cp .env.example .env
 
 # Start the development server
 pnpm start
@@ -49,95 +65,119 @@ pnpm start
 - `pnpm test` - Run tests in watch mode
 - `pnpm lint` - Check code style issues
 - `pnpm format` - Format code with Biome
-- `pnpm lint:fix` - Fix code style issues
 - `pnpm typecheck` - Check TypeScript types
-- `pnpm clean` - Clean build files and dependencies
 - `pnpm commit` - Create a new commit using Commitizen
-- `pnpm prepare` - Install git hooks using Lefthook
 
 ## 🏗️ Project Structure
 
 ```
 src/
-├── app/          # Expo Router pages
-├── components/   # Reusable components
-├── constants/    # App constants
-├── hooks/        # Custom hooks
-└── utils/        # Helper functions
+├── app/                # Expo Router pages
+│   ├── auth/          # Authentication screens
+│   ├── mechanic/      # Mechanic dashboard
+│   └── user/          # User screens
+├── components/         # Reusable components
+│   ├── common/        # Shared components
+│   ├── mechanic/      # Mechanic-specific components
+│   └── user/          # User-specific components
+├── hooks/             # Custom hooks
+├── services/          # API and third-party services
+├── store/             # State management
+├── types/             # TypeScript types
+└── utils/             # Helper functions
 ```
 
-## 📝 Commit Convention
+## 🛠️ Technical Architecture
 
-This project uses [Conventional Commits](https://www.conventionalcommits.org/) with Commitizen for consistent commit messages. Instead of `git commit`, use:
+### Frontend Features
+- 🎯 TypeScript for enhanced developer experience
+- 📱 Expo Router for file-based routing
+- 💫 React Native Reanimated for smooth animations
+- 🎨 Native Base UI components
+- 🔄 Real-time updates with Socket.IO
+- 📍 Location tracking with Expo Location
 
+### Backend Integration
+- 🔥 Firebase Authentication
+- 📡 RESTful API with Express.js
+- 📦 MongoDB for data persistence
+- 🚦 Socket.IO for real-time features
+- 🗺️ Google Maps API integration
+
+## 🧪 Quality Assurance
+
+### Testing
 ```bash
-pnpm commit
-```
-
-## 🔄 Automated Releases
-
-This project uses Semantic Release for automated versioning and changelog generation. The release process is triggered on the `main` branch when commits follow the conventional commit format.
-
-## 🧪 Testing
-
-Run the test suite:
-
-```bash
+# Run tests
 pnpm test
-```
 
-## 🧹 Code Style
+# Check TypeScript types
+pnpm typecheck
 
-This project uses Biome for linting and formatting. Check and fix code style issues:
-
-```bash
-# Check for issues
+# Lint code
 pnpm lint
-
-# Fix issues automatically
-pnpm lint:fix
-
-# Format code
-pnpm format
 ```
 
-## 📱 Development Workflow
+### Code Quality Tools
+- 🎯 Biome for linting and formatting
+- 📝 Commitizen for consistent commits
+- 🔄 Semantic Release for versioning
+- 🪝 Lefthook for Git hooks
 
-1. Create a new branch for your feature/fix
-2. Make your changes
-3. Run `pnpm typecheck` and `pnpm lint` to check for issues
-4. Use `pnpm commit` to create a conventional commit
-5. Push your changes and create a pull request
+## 🚀 Deployment
 
-## 🔧 VS Code Configuration
+### Development
+1. Configure environment variables
+2. Start the development server
+3. Use Expo Go app for testing
 
-This project includes recommended VS Code settings and extensions. Install them from the Extensions panel by searching for `@recommended`.
+### Production
+1. Build the app using EAS Build
+2. Submit to App Store and Play Store
+3. Configure CI/CD pipeline
 
-## 🧹 Clean Project
+## 📱 App Variants
 
-To clean the project and remove all dependencies:
+- 🚗 User App: For motorists seeking assistance
+- 🔧 Mechanic App: For service providers
+- 👨‍💼 Admin Dashboard: For system management
 
-```bash
-pnpm clean
-```
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Run tests (`pnpm test`)
+4. Commit changes using Commitizen (`pnpm commit`)
+5. Push to the branch (`git push origin feature/AmazingFeature`)
+6. Open a Pull Request
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🤝 Contributing
+## 🛣️ Roadmap
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+### Phase 1 (Q1 2024)
+- [ ] Core user and mechanic apps
+- [ ] Basic location services
+- [ ] Authentication system
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes using `pnpm commit`
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+### Phase 2 (Q2 2024)
+- [ ] Payment integration
+- [ ] Chat system
+- [ ] Rating system
 
-## 📚 Learning Resources
+### Phase 3 (Q3 2024)
+- [ ] AI-powered diagnostics
+- [ ] Parts marketplace
+- [ ] Advanced analytics
 
-- [Expo Documentation](https://docs.expo.dev/)
-- [React Native Documentation](https://reactnative.dev/docs/getting-started)
-- [TypeScript Documentation](https://www.typescriptlang.org/docs/)
-- [Expo Router Documentation](https://expo.github.io/router/docs/)
+## 🤝 Support
+
+- 📧 Email: support@mechgo.com
+- 💬 Discord: [Join our community](https://discord.gg/mechgo)
+- 📚 Documentation: [docs.mechgo.com](https://docs.mechgo.com)
+
+---
+
+<p align="center">Built with ❤️ using <a href="https://expo.dev">Expo</a> and <a href="https://reactnative.dev">React Native</a></p>
